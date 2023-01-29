@@ -25,7 +25,13 @@ const app = express();
 
 const storage = multer.diskStorage({
   destination: (_, __, cb) => {
-    if (!fs.existsSync("uploads")) fs.mkdir("uploads");
+    if (!fs.existsSync("uploads"))
+      fs.mkdir("uploads", (err) => {
+        if (err) {
+          return console.error(err);
+        }
+        console.log("Directory created successfully!");
+      });
     cb(null, "uploads");
   },
   filename: (_, file, cb) => {

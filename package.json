@@ -7,7 +7,6 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "proxy": "http://localhost:4444",
   "author": "",
   "license": "ISC",
   "dependencies": {
