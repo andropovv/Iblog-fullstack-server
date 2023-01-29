@@ -1,5 +1,5 @@
 import CommentModel from "../models/comment.js";
-import PostModel from "../models/Post.js";
+import PostModel from "../models/post.js";
 
 export const getForPost = async (req, res) => {
   const postId = req.params.id;
