@@ -15,7 +15,6 @@ import {
   UserController,
 } from "./controllers/index.js";
 import { commentCreateValidation } from "./validations/commentCreate.js";
-console.log(process.env);
 
 mongoose
   .connect(process.env.MONGODB_URL)
